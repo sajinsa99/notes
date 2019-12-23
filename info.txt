@@ -1,0 +1,25 @@
+/usr/bin/vi
+
+48°54'1.23" N 2°16'38.586" E
+exemple : 41°24'12.2" N 2°10'26.5" E
+
+%c^[hd+rNb}C]z!3JQqH-5r!CC&9%RFd
+aO^dN
+
+vi
+dw : efface mot à droite
+. pour répéter la dernière commande
+u pour annuler les actions, (comme controle z
+> pour indenter
+= autoindent
+
+ssh-keygen -t rsa -b 4096 -f $HOME/.ssh/id_rsa_git
+fichier config:
+Host github.com
+User i051566
+IdentityFile $HOME/.ssh/id_rsa_git
+
+
+ack ag rg
+vim-qf 
+git config --system core.longpaths true
