@@ -23,3 +23,14 @@ IdentityFile $HOME/.ssh/id_rsa_git
 ack ag rg
 vim-qf 
 git config --system core.longpaths true
+
+crash collectl nmon psacct iptraf-ng bridge-utils iotop atop powertop iftop ngrep bmon traceroute saidar cpulimit lshw nload sysstat nmap nc htop mc strace lsof bind-utils net-tools squid zip unzip
+
+alias cpvu='rsync --progress -h -l -r -t -u -v'
+alias la='ls -alhF'
+alias lat='ls -althF'
+alias latr='ls -altrhF'
+alias ll='ls -lhF'
+alias ls='ls --color=auto'
+alias lt='ls -lthiF'
+alias ltr='ls -ltrhF'
