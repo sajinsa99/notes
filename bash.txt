@@ -1,0 +1,52 @@
+Raccourcis clavier en mode Emacs
+TAB : auto-complète un mot à partir de la position du curseur.
+CTRL + a : déplace le curseur en début de ligne (équivalent à la touche début).
+CTRL + c : envoie le signal SIGINT à la tâche au premier plan, ce qui a pour effet de l'interrompre.
+CTRL + d : en début de ligne ferme le shell courant (équivalent de la commande exit). Si un début de commande a été saisi, détruit (delete) le caractère suivant le curseur.
+CTRL + e : (end) déplace le curseur en fin de ligne (équivalent à la touche fin).
+CTRL + p : (previous) rappelle la commande précédente (équivalent à la touche flèche du haut).
+CTRL + n : (next) rappelle la commande suivante (équivalent à la touche flèche du bas).
+CTRL + r : (research) rappelle la dernière commande contenant les caractères spécifiés (équivalent à vim ~/.bash_history). Un 2eCTRL + r rappelle la prochaine commande antérieure correspondant à la recherche. CTRL + s : rappelle la commande suivante de la recherche (attention à ne pas l'exécuter depuis un terminal car cette commande déclencherait son XOFF). CTRL + o : exécute la commande trouvée dans la recherche.
+CTRL + l : efface le contenu de l'écran (équivalent à la commande clear).
+CTRL + u : efface le contenu de la ligne avant le curseur et le place dans le presse-papier.
+CTRL + k : efface le contenu de la ligne après le curseur et le place dans le presse-papier.
+CTRL + w : efface le contenu du curseur au début du mot le précédant et le place dans le presse papier.
+CTRL + y : (yank) ajoute le contenu du presse-papier à partir de la position du curseur.
+CTRL + z : envoie le signal SIGTSTP à la tâche au premier plan ce qui a pour effet de la suspendre. Pour la réafficher on peut entrer fg 'nom du processus'.
+CTRL + x CTRL + x : (car x est en forme de croisement) alterne le curseur avec son ancienne position.
+CTRL + x CTRL + e : (editor car reprend la variable $EDITOR du shell) édite la ligne courante dans votre éditeur de texte.
+CTRL + _ : annule la dernière modification.
+ALT + f ou ESC + f : (forward) avance le curseur jusqu'à la fin du mot le suivant.
+ALT + b ou ESC + b : (backward) recule le curseur jusqu'au début du mot le précédant.
+ALT + BS ou ESC + BS : coupe le texte jusqu'au début du mot précédant le curseur.
+ALT + d ou ESC + d : coupe le texte jusqu'à la fin du mot suivant le curseur.
+ALT + u ou ESC + u : transforme les lettres en majuscules jusqu'à la fin de mot suivant le curseur.
+ALT + l ou ESC + l : transforme les lettres en minuscules jusqu'à la fin de mot suivant le curseur.
+ALT + c ou ESC + c : en partant du curseur, met la première lettre rencontrée en majuscule et les suivantes en minuscule jusqu'à la fin de mot trouvée.
+ALT + r ou ESC + r : annule les changements et remet la ligne telle qu'elle était dans l'historique.
+Raccourcis clavier en mode vi
+Le mode vi s'active par la commande set -o vi et se désactive par set +o vi. Au début d'une ligne on est en mode insertion, pour passer en mode commande il faut appuyer sur la touche échap.
+
+Voici un résumé des commandes, pour un descriptif complet rendez-vous sur la page vi.
+
+Déplacement :
+
+$ : pour aller en fin de ligne
+^ : pour aller en début de ligne
+j et k : pour afficher la commande suivante et précédente
+h et l : pour déplacer le curseur vers la gauche et la droite
+w : place le curseur sur le premier caractère du mot suivant
+b : place le curseur sur le premier caractère du mot précédent
+Action :
+
+u : annule l'action précédente
+D : supprime la fin de la ligne à partir du curseur
+yy : copie la ligne courante (et la copie dans le buffer)
+dd : supprime la ligne courante (et la copie dans le buffer)
+yw : copie le mot suivant le curseur dans le bufferc
+dw : coupe le mot suivant le curseur, et le copie dans le buffer
+y$ : copie du curseur à la fin de ligne dans le buffer
+d^ : supprime du début de la ligne jusqu'au curseur et le copie dans le buffer
+p : Coller après le curseur
+P : coller avant le curseur
+e : invoque l'éditeur de ligne de commande, normalement vi ou vim
